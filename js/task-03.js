@@ -26,7 +26,7 @@ const createGalleryItem = (img) => {
 }
 
 const gallery = images.map((img) => createGalleryItem(img))
-console.log("🚀 ~ file: task-03.js ~ line 29 ~ gallery ", gallery)
+
 
 
 ref.gallery.insertAdjacentHTML("afterbegin", gallery.join(" ") )
