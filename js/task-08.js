@@ -13,16 +13,14 @@ function handleSubmit(event) {
         return alert("Все поля должны быть заполнены");
     }
     
-    const formData = new FormData(event.currentTarget)
-
-    let formОbject = {
+    const formОbject = {
     }
-     formData.forEach((value, name) => {
-         return formОbject[name] = value;
-    } )
+    
+    formОbject[event.currentTarget.elements.email.name] = event.currentTarget.elements.email.value
+    formОbject[event.currentTarget.elements.password.name] = event.currentTarget.elements.password.value
     console.log(formОbject)
 
-     event.currentTarget.reset();
+    event.currentTarget.reset();
 
 }
 
